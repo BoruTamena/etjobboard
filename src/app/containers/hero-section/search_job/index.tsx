@@ -56,17 +56,17 @@ const SearchJob: FC<Props>=({})=>{
     <Input 
       type="text" 
       placeholder="Job Title or Keyword" 
-      className="border-t-0 border-l-0 border-r-0 border-b-1"
+      className="border-t-0 shadow-none border-l-0 border-r-0 border-b-1"
     />
   </div>
 
   {/* Location Input */}
-  <div className="flex items-center justify-center space-x-2 full md:p-5">
+  <div className="flex items-center justify-center space-x-2 w-full md:p-5">
     <LocateFixed className="mt-1 md:mt-3" />
     <Input 
       type="text"  
       placeholder="Ethiopia, Addis Ababa" 
-      className="w-full max-w-full border-t-0 border-l-0 border-r-0 border-b-1"
+      className="w-full shadow-none max-w-full border-t-0 border-l-0 border-r-0 border-b-1"
     />
   </div>
 
@@ -74,7 +74,7 @@ const SearchJob: FC<Props>=({})=>{
   <div className="w-full md:w-auto md:p-5">
     <Button 
       type="submit" 
-      className=" w-full md:w-auto bg-purple-500 text-white hover:bg-purple-800 capitalize"
+      className=" w-full p-5 md:w-auto bg-purple-500 text-white hover:bg-purple-800 capitalize"
     >
       Search My Job
     </Button>

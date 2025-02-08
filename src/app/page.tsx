@@ -6,6 +6,7 @@ import PartnersCompanies from "./containers/partners";
 import CareerPath from "./containers/career";
 import { ArrowRight } from "lucide-react";
 import CtaSection from "./containers/cta";
+import FeatureJobs from "./containers/featuredjobs";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
  <section className="container mx-auto p-2 mt-10 md:mt-28 ">
 
   <div className="block md:flex justify-between items-center mb-10">
-      <p className="font-bold text-xl md:text-4xl">
+      <p className="font-bold text-3xl md:text-4xl">
         <span className=" text-purple-600">Explore by</span>
         <span className="px-2">Category</span>
       </p>
@@ -42,9 +43,20 @@ export default function Home() {
   </section>
 
 
-  <section className="container mx-auto p-3 mt-20">
+  <section className="container mx-auto p-3 mt-16">
     <CtaSection/>
 
+  </section>
+
+
+  <section className="container mx-auto p-3 ">
+
+    <p className="mt-28 mb-10 "> 
+      <span className="text-4xl font-bold">Featured</span>
+       <span className="text-4xl font-bold text-purple-600">Jobs</span>
+    </p>
+
+    <FeatureJobs/>
   </section>
    
   </div>

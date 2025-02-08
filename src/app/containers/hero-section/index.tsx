@@ -17,12 +17,12 @@ const HeroSection:FC<Props>=({})=>{
           
            {/* Left Section */}
            <div className="col-span-4 p-2 md:col-span-2 md:px-3 md:py-10 ">
-             <p className="text-6xl font-medium md:text-8xl">Discover</p>
-             <p className="text-6xl font-medium md:text-8xl">More than</p>
-             <p className="text-6xl font-medium md:text-8xl md:font-bold text-purple-600">5000+ jobs</p>
+             <p className="text-6xl font-medium md:text-7xl">Discover</p>
+             <p className="text-6xl font-medium md:text-7xl">More than</p>
+             <p className="text-6xl font-medium md:text-7xl md:font-bold text-purple-600">5000+ jobs</p>
      
              <img className="y-1/2 md:py-3" src="/Group.svg"  alt="group equal" />
-             <p className=" px-1 md:w-[500px] md:py-4">
+             <p className=" px-1 md:w-[500px]">
                Great platform for job seekers looking for new career heights and passionate about startups.
              </p>
      
@@ -43,8 +43,8 @@ const HeroSection:FC<Props>=({})=>{
              <Image
                src="/manhomePic.png"
                alt="img"
-               fill
-               className="object-contain z-20"
+               fill={1==1}
+               className=" object-contain z-20"
              />
            </div>
          </div>
