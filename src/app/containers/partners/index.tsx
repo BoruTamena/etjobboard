@@ -12,7 +12,7 @@ interface Props {
 const PartnersCompanies:FC<Props>=({})=>{
     return(
 
-        <div className="container mx-auto flex flex-wrap flex-row justify-start space-x-2 flex-col-2 md:flex md:justify-between items-center px-4 mb-1">
+        <div className="container mx-auto flex  flex-wrap flex-row justify-start space-x-2  space-y-5 flex-col-2 md:flex md:justify-between items-center px-4 mb-1">
             {
                 CompaniesList.map((item,index)=>
                 <Image
