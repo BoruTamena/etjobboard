@@ -5,6 +5,7 @@ import HeroSection from "./containers/hero-section";
 import PartnersCompanies from "./containers/partners";
 import CareerPath from "./containers/career";
 import { ArrowRight } from "lucide-react";
+import CtaSection from "./containers/cta";
 
 export default function Home() {
   return (
@@ -37,12 +38,14 @@ export default function Home() {
     </div>
 
   </div>
-    
-
-
-
     <CareerPath/>
-   </section>
+  </section>
+
+
+  <section className="container mx-auto p-3 mt-20">
+    <CtaSection/>
+
+  </section>
    
   </div>
   );
