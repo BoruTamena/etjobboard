@@ -13,8 +13,6 @@ export default function Home() {
    
   <div>
 
-    <NavBar/>
-
     <HeroSection/>
 
    <section className=" container mx-auto ">

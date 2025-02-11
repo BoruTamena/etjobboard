@@ -5,7 +5,7 @@ export const NavItemLists:NavItem[]=[
 
     {
      Id:1,
-     Name:"findjobs",
+     Name:"find jobs",
      Path:"/jobs"
     },
 
