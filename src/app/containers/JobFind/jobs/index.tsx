@@ -32,16 +32,16 @@ const JobCard:FC<Job>=({Id,Title,Subtitle,Logo,Description,Category})=>{
                         </CardDescription>
                         {
                             Category.map((item,index)=><Badge variant="outline" 
-                             key={index} className=" bg-red-400 p-2 font-normal text-yellow-50 rounded-full m-1">{item}</Badge>)
+                             key={index} className=" bg-red-400 p-2 font-normal text-yellow-50 rounded-full m-1 mt-5">{item}</Badge>)
                         }
 
                     </CardContent>
 
                     
                     <div className="col-span-12 md:col-span-4 p-3">
-                        <Button variant="default" className=" bg-purple-400 p-3 w-full shadow-none"> Apply</Button>
+                        <Button variant="default" className=" bg-purple-500 p-3 w-full shadow-none text-white hover:bg-purple-600"> Apply</Button>
 
-                        <Progress value={50} className="w-[60%] bg-green-600 mt-3"/>
+                        <Progress value={50} className="w-[100%] bg-green-200 mt-3"/>
 
                         <p className="mt-3 font-normal text-neutral-400">5 people applied of 10 capicity</p>
                     </div>

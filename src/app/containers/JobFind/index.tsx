@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import JobFilter from "./jobfilter";
 
 import JobCard from "./jobs";
-import { EmployementType, JobCategories, JobLevels, JobSearchList } from "./constant";
+import { EmployementType, JobCategories, JobLevels, JobSearchList, Salaries } from "./constant";
 
 
 interface Props {
@@ -20,6 +20,7 @@ const JobsSection:FC<Props>=()=>{
               EmpoymentType={EmployementType}
               Categories={JobCategories}  
               JobLevels={JobLevels}
+              Range={Salaries}
               />
 
             </div>

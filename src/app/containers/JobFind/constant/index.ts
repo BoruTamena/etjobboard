@@ -26,6 +26,11 @@ const JobLevels:string[]=[
     "Expertise",
 ]
 
+const Salaries:string[]=[
+    "10-500($)",
+    "1000-1500($)",
+]
+
 const JobSearchList:Job []=[
     {
         Id:1,
@@ -52,5 +57,6 @@ export {
     EmployementType,
     JobSearchList,
     JobCategories,
-    JobLevels
+    JobLevels,
+    Salaries
 }
