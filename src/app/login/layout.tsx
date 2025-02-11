@@ -20,15 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
+
+      <div
         className={`${pop.className} anticipated` }
       >
-        {/* <NavBar/> */}
         {children}
 
-        <Footer/>
-      </body>
-    </html>
+      </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client"
 import React ,{FC}from "react";
 import { Job } from "../../../../../types/featurejob";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,12 +6,12 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-
-
-
-
+import { useRouter } from "next/navigation";
 
 const JobCard:FC<Job>=({Id,Title,Subtitle,Logo,Description,Category})=>{
+
+const nav= useRouter()
+  
 
     return (
         <div className="p-3">
@@ -39,7 +40,10 @@ const JobCard:FC<Job>=({Id,Title,Subtitle,Logo,Description,Category})=>{
 
                     
                     <div className="col-span-12 md:col-span-4 p-3">
-                        <Button variant="default" className=" bg-purple-500 p-3 w-full shadow-none text-white hover:bg-purple-600"> Apply</Button>
+                        <Button variant="default" 
+                        className=" bg-purple-500 p-3 w-full shadow-none text-white hover:bg-purple-600"
+                         onClick={()=>nav.push(`jobs/${Id}`)}
+                        > Apply</Button>
 
                         <Progress value={50} className="w-[100%] bg-green-200 mt-3"/>
 
