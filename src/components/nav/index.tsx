@@ -1,22 +1,21 @@
 "use client"
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { NavItemLists } from "./constant";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { MenuIcon } from "lucide-react";
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "../ui/menubar";
-import { Separator } from "../ui/separator";
 
 interface Props {}
 
 const NavBar: FC<Props> = () => {
 
 
+  const [open,setOpen]=useState(false)
 
   return (
     <nav className=" bg-slate-200  md:bg-slate-50  ">
-      <div className=" flex justify-between  md:container mx-auto px-3 py-5 md:flex items-center justify-center">
+      <div className=" flex justify-between md:container mx-auto px-3 py-5 md:flex items-center md:justify-center">
     
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2 pr-4">
@@ -44,28 +43,27 @@ const NavBar: FC<Props> = () => {
         </div>
 
 
-        <div className=" text-white md:hidden relative ">
+        <div className=" text-white md:hidden container relative top-0 right-0">
             
+        <MenuIcon className=" absolute right-0  -top-3 "  onClick={()=>setOpen(!open)}/>
 
-            <Menubar className="z-50 border-none shadow-none">
-              <MenubarMenu>
-                <MenubarTrigger>
-                    <MenuIcon/>
-                </MenubarTrigger>
 
-                <MenubarContent className="bg-slate-300">
-                   {
-                    NavItemLists.map((item,index)=><MenubarItem key={item.Id}>
-                      <Link href={item.Path} className=" capitalize">
-                        {item.Name}
-                      </Link>
-                      
-                    </MenubarItem>)
-                   }
-               
-                </MenubarContent>
-              </MenubarMenu>
-            </Menubar>
+{
+        open && <div className=" absolute right-1 top-6 bg-purple-50 z-50" >
+            <ul className="flex flex-col flex-grow justify-space p-1">
+                {NavItemLists.map((item) => (
+                  <li key={item.Id}>
+                    <Link className="text-gray-700 hover:text-purple-500 px-4 py-2" href={item.Path}>
+                      <span className="capitalize">{item.Name}</span>
+                    </Link>
+                    
+                  </li>
+                ))}
+              </ul>
+              
+            </div>}
+
+           
         </div>
       </div>
     </nav>
