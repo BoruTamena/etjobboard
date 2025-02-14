@@ -1,6 +1,10 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LocateFixed, LocateIcon, Search } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 import React, { FC } from "react";
 
 
@@ -10,6 +14,11 @@ interface Props {
 
 
 const SearchJob: FC<Props>=({})=>{
+
+
+  const router= useRouter()
+
+  
     return(
       
 
@@ -74,8 +83,10 @@ const SearchJob: FC<Props>=({})=>{
   <div className="w-full md:w-auto md:p-5">
     <Button 
       type="submit" 
+      onClick={()=>router.push("/jobs ")}
       className=" w-full p-5 md:w-auto bg-purple-500 text-white hover:bg-purple-800 capitalize"
-    >
+   >
+    
       Search My Job
     </Button>
   </div>
