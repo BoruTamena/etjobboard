@@ -48,7 +48,7 @@ const NavBar: FC<Props> = () => {
         <MenuIcon className=" absolute right-0  -top-3 "  onClick={()=>setOpen(!open)}/>
 
 
-{
+        {
         open && <div className=" absolute right-1 top-6 bg-purple-50 z-50" >
             <ul className="flex flex-col flex-grow justify-space p-1">
                 {NavItemLists.map((item) => (
@@ -59,6 +59,12 @@ const NavBar: FC<Props> = () => {
                     
                   </li>
                 ))}
+                <li>
+                <Link className="text-gray-700 hover:text-purple-500 px-4 py-2" href="/login">
+                    <span className="capitalize">log in</span>
+                </Link>
+                </li>
+                
               </ul>
               
             </div>}

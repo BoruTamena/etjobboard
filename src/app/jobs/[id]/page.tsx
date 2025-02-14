@@ -29,9 +29,9 @@ const Page = async ({params}:{params:Promise<{id:number}>})=>{
         <section className="">
             {/* <p>dynamic jobs pages </p> */}
 
-            <div className="container mx-auto mt-3 p-3 grid grid-cols-12 gap-12 ">
+            <div className="container mx-auto mt-3 p-3 grid grid-cols-12 gap-3 md:gap-12 ">
 
-                <div className="col-span-7">
+                <div className=" col-span-11 md:col-span-7">
                     <article >
                         <p className="text-xl font-medium capitalize">Descriptions</p>
 
@@ -67,7 +67,7 @@ const Page = async ({params}:{params:Promise<{id:number}>})=>{
                 </div>
 
 
-                <div className=" col-span-4">
+                <div className=" col-span-11 mt-5  md:col-span-4 md:mt-0">
 
                     <article>
                     <p className=" text-xl font-medium capitalize">About Job</p>
