@@ -7,12 +7,13 @@ import CareerPath from "./containers/career";
 import { ArrowRight } from "lucide-react";
 import CtaSection from "./containers/cta";
 import FeatureJobs from "./containers/featuredjobs";
+import Footer from "./containers/footer";
 
 export default function Home() {
   return (
    
   <div>
-
+    <NavBar/>
     <HeroSection/>
 
    <section className=" container mx-auto ">
@@ -57,6 +58,7 @@ export default function Home() {
     <FeatureJobs/>
   </section>
    
+   <Footer/>
   </div>
   );
 }

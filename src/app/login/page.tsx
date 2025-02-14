@@ -1,4 +1,4 @@
-
+"use client"
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,10 +17,10 @@ const Page:FC<Props>=()=>{
             <div className="flex flex-col items-center gap-3 mt-7 p-5">
                 
                 {/* Logo Section */}
-                <div className="flex items-center space-x-2 pr-4">
+                <Link href="/" className="flex items-center space-x-2 pr-4">
                     <Image width={30} height={30} src="/Frame 3.svg" alt="logo" />
                     <p className="font-bold">JobHuntly</p>
-                </div>
+                </Link>
         
             
                 <p className="text-2xl capitalize font-semibold mt-5">Welcome back</p>
